@@ -87,6 +87,7 @@ const resolvers = {
       'utf8'
     ),
     resolvers,
+    playground: true,
     context: {
       prisma,
     }
