@@ -88,6 +88,7 @@ const resolvers = {
     ),
     resolvers,
     playground: true,
+    introspection: true,
     context: {
       prisma,
     }
