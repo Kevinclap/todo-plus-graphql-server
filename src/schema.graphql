@@ -1,0 +1,27 @@
+type Query {
+    info: String!
+    allUsers: [User!]!
+    user(id: Int): User
+    toDo(id: Int): ToDo
+  }
+
+  type Mutation {
+    user(name: String!, email: String!): User!
+    updateUser(id: Int!, name: String, email: String): User
+    deleteUser(id: Int!): User
+    toDo(id: Int!, title: String!): ToDo!
+  }
+
+  type User {
+      id: Int
+      name: String!
+      email: String!
+      toDo: [ToDo!]!
+  }
+
+   type ToDo {
+      id: Int
+      title: String!
+      author: User!
+      authorId: Int!
+  }
